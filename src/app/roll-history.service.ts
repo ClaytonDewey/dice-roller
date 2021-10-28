@@ -1,9 +1,19 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class RollHistoryService {
 
-  constructor() { }
+    constructor() { }
+
+    rollHistory: any[] = [];
+
+    addRollHistory = (rh: any) => {
+        this.rollHistory = [
+            ...this.rollHistory
+            , rh
+        ];
+    };
+
 }
