@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-die-roller',
-  templateUrl: './die-roller.component.html',
-  styleUrls: ['./die-roller.component.css']
+    selector: 'app-die-roller',
+    templateUrl: './die-roller.component.html',
+    styleUrls: ['./die-roller.component.css']
 })
 export class DieRollerComponent implements OnInit {
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
+    sidecount = "6";
+    rollValue = 0;
+
+    roll = () => {
+        this.rollValue = Math.floor(Math.random() * 6) + 1;
+    };
 }
